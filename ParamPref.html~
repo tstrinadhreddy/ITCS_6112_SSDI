@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Parameters Preferences</title>
+</head>
+<body>
+<form action="PickBest.jsp"  method=get>
+<center>
+Please pick the parameters you want to consider for picking the best location. Assign the weightage you would like to give for them as well.<br/>
+Please assign non negative weights for parameters.<br/><br/>
+<table>
+<th>Select</th>
+<th></th><th>Weight</th><th></th>
+<th>Parameter</th>
+<tr>
+<td><input type="checkbox" name="UserPref" value="pop"></td><td><input type=radio name=pwt value=Low>Low</td><td><input type=radio name=pwt value=Med>Med</td><td><input type=radio name=pwt value=High>High</td><td>Population</td>
+</tr>
+<tr>
+<td><input type="checkbox" name="UserPref" value="earn"></td><td><input type=radio name=ewt value=Low>Low</td><td><input type=radio name=ewt value=Med >Med</td><td><input type=radio name=ewt value=High>High</td><td>Earnings</td>
+</tr>
+<tr>
+<td><input type="checkbox" name="UserPref" value="comp"></td><td><input type=radio name=cwt value=Low>Low</td><td><input type=radio name=cwt value=Med >Med</td><td><input type=radio name=cwt value=High>High</td><td>Competitors</td>
+</tr>
+</table>
+<br><input type="submit" name="submit" value="Submit"><br>
+<input type=hidden name=cdata value=<%request.getAttribute("cdata")%>>
+</center>
+</form>
+</body>
+
